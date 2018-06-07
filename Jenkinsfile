@@ -10,6 +10,7 @@ pipeline {
         echo "${TEST_USER_PSW}"
         sh 'java -version'
       }
+    }
       stage('Get Kernel') {
       steps {
         script {
@@ -21,7 +22,7 @@ pipeline {
           }
         }
       }
-    }
+    
     stage('Say Kernel') {
       steps {
         echo "${KERNEL_VERSION}"
